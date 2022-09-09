@@ -1,3 +1,5 @@
+// class helps in handling the business logic
+
 class Employee2 {
     id: number;
     name: string;
@@ -9,7 +11,14 @@ class Employee2 {
         this.name = name;
         this.address = address;
     }
-    
+
+    //methods
+    getNameWithAddress() {
+        // return this.name + " " + this.address;
+        // this concatenation can have bugs
+
+        return `${this.name} stays at ${this.address}`; //string literal
+    }
 }
 
 let tina = new Employee2(2, "Tina", "Pune");
